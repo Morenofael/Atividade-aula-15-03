@@ -1,0 +1,50 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia nomes[100]
+	     inteiro opcao = 0 
+	     cadeia nome
+	     inteiro controle2 = 0
+
+	     enquanto( opcao!=4){
+	     
+		escreva("*MENU**\n")
+		escreva("Cadastrar convidado [1]\n")
+		escreva("Excluir convidado   [2]\n")
+		escreva("Lista de convidados [3]\n")
+		escreva("Sair                [4]\n")
+		escreva("***\n")
+
+
+		leia(opcao)
+		limpa()
+
+		escolha(opcao){
+
+			caso 1:
+			escreva("Escreva o nome!","\n")
+			leia(nome)
+			para(inteiro i = 0;i<100;i++){
+				se(nomes[i]==""){
+					nomes[i] = nome
+					pare
+				}
+			}
+			pare
+
+			caso 2:
+			escreva("Qual o número do convidado que você quer excluir?")
+			leia(controle2)
+			nomes[controle2] = ""
+			pare
+			caso 3:
+			para(inteiro i = 0;i<100;i++){
+				escreva(nomes[i],"\n")
+			}
+			pare
+		}
+		}
+	}
+}
